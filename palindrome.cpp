@@ -5,35 +5,34 @@ using namespace std;
 
 int main()
 {
-    //char array with the size of 50
-    char strin[50];
+    const int size = 50;
+    char string[size];
     
-    //Taking users input into array
     cout <<"Enter String:";
-    cin.getline(strin,50);
+    cin.getline(string,size);
     
-    //Finding the size of array i = counter, increment as long as position isn't null
-    for(int i = 0; strin[i] != '\0'; i++)
-    
-    //divide array in half and compare both sides using a decrement and increment variable    
-    for(int a = 0;int b = 0; a < i/2, a++, b--)
+    int length;
+    for(length = 0; string[length] !='\0'; length++)
     {
-        //if at any point array at position (a++,b--) not equal retun false and break out loop
-        if(strin[a] != strin[b])
-        {
-            return false;
-            break;
-        }
-        
+        length = length;
     }
     
-    if(false)
+    int forward,backward,check = 0;
+    for(forward = 0, backward = length-1;forward<length/2; forward++,backward--)
     {
-        cout << "Not a palindrome";
+        if(string[forward] !=string[backward])
+        {
+            check = -1;
+        }
+    }
+    
+    if(check == -1)
+    {
+        cout <<"Not a Palindrome";
     }
     else
     {
-        cout <<"This is a palindrome";
+        cout <<"This is a Palindrome";
     }
     
     return 0;
