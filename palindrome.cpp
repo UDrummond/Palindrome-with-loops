@@ -13,9 +13,9 @@ int main()
     
     int length;
     for(length = 0; string[length] !='\0'; length++)
-    {
-        length = length;
-    }
+    // {
+    //     length = length;
+    // }
     
     int forward,backward,check = 0;
     for(forward = 0, backward = length-1;forward<length/2; forward++,backward--)
